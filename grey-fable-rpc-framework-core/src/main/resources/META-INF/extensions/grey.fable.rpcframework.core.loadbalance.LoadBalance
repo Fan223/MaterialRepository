@@ -1,0 +1,2 @@
+random=grey.fable.rpcframework.core.loadbalance.RandomLoadBalance
+consistenthash=grey.fable.rpcframework.core.loadbalance.ConsistentHashLoadBalance
