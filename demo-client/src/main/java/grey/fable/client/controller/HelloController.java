@@ -2,7 +2,7 @@ package grey.fable.client.controller;
 
 import grey.fable.api.Hello;
 import grey.fable.api.HelloService;
-import grey.fable.rpcframework.core.annotation.RpcReference;
+import grey.fable.rpc.framework.core.annotation.RpcReference;
 import org.springframework.stereotype.Component;
 
 /**

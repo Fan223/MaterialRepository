@@ -1,8 +1,8 @@
 package grey.fable.server.test;
 
 import grey.fable.api.HelloService;
-import grey.fable.rpcframework.core.config.RpcServiceConfig;
-import grey.fable.rpcframework.core.remoting.transport.netty.server.NettyRpcServer;
+import grey.fable.rpc.framework.core.config.RpcServiceConfig;
+import grey.fable.rpc.framework.core.remoting.transport.netty.server.NettyRpcServer;
 import grey.fable.server.service.impl.HelloServiceImpl;
 
 /**

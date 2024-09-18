@@ -2,7 +2,7 @@ package grey.fable.server.service.impl;
 
 import grey.fable.api.Hello;
 import grey.fable.api.HelloService;
-import grey.fable.rpcframework.core.annotation.RpcService;
+import grey.fable.rpc.framework.core.annotation.RpcService;
 import lombok.extern.slf4j.Slf4j;
 
 /**

@@ -1,7 +1,7 @@
 package grey.fable.client;
 
 import grey.fable.client.controller.HelloController;
-import grey.fable.rpcframework.core.annotation.RpcScan;
+import grey.fable.rpc.framework.core.annotation.RpcScan;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

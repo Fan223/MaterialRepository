@@ -1,7 +1,7 @@
 package grey.fable.server;
 
-import grey.fable.rpcframework.core.annotation.RpcScan;
-import grey.fable.rpcframework.core.remoting.transport.netty.server.NettyRpcServer;
+import grey.fable.rpc.framework.core.annotation.RpcScan;
+import grey.fable.rpc.framework.core.remoting.transport.netty.server.NettyRpcServer;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
