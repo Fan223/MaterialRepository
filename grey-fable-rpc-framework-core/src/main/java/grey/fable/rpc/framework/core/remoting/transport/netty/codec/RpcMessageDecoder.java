@@ -17,7 +17,8 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Arrays;
 
 /**
- * RPC 消息解码器.
+ * RPC 消息解码器. 继承 LengthFieldBasedFrameDecoder(基于长度的解码器),
+ * 在消息中嵌入长度字段, 通过读取长度字段来判断每条消息的大小, 并根据此大小进行消息拆分.
  *
  * @author GreyFable
  * @since 2024/8/28 17:26

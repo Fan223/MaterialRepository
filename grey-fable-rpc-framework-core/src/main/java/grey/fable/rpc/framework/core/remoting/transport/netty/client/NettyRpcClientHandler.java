@@ -57,7 +57,7 @@ public class NettyRpcClientHandler extends ChannelInboundHandlerAdapter {
     }
 
     /**
-     * Netty 心跳机制相关。保证客户端和服务端的连接不被断掉，避免重连.
+     * 空闲检测, 即客户端一段时间内未发送消息, 则发送心跳消息, 防止被认定为连接假死断开连接.
      *
      * @param ctx {@link ChannelHandlerContext}
      * @param evt {@link IdleStateEvent}

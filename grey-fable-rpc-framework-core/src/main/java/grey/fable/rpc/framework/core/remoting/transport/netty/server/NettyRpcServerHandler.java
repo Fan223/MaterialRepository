@@ -72,16 +72,25 @@ public class NettyRpcServerHandler extends ChannelInboundHandlerAdapter {
         }
     }
 
+    /**
+     * 空闲检测, 即服务端一段时间内未接收到客户端消息, 则关闭连接, 避免连接假死, 耗费资源.
+     *
+     * @param ctx {@link ChannelHandlerContext}
+     * @param evt {@link IdleStateEvent}
+     * @author GreyFable
+     * @since 2024/9/23 13:58
+     */
     @Override
     public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
-        if (evt instanceof IdleStateEvent idlestateevent) {
-            IdleState state = idlestateevent.state();
+        if (evt instanceof IdleStateEvent idleStateEvent) {
+            IdleState state = idleStateEvent.state();
+
             if (state == IdleState.READER_IDLE) {
-                log.info("空闲检查发生, 关闭连接");
+                log.error("长时间未收到客户端消息, 关闭连接");
                 ctx.close();
+            } else {
+                super.userEventTriggered(ctx, evt);
             }
-        } else {
-            super.userEventTriggered(ctx, evt);
         }
     }
 

@@ -55,8 +55,8 @@ public class NettyRpcClient implements RpcRequestTransport {
                     @Override
                     protected void initChannel(SocketChannel socketChannel) {
                         ChannelPipeline channelPipeline = socketChannel.pipeline();
-                        // 如果在 15 秒内没有数据发送到服务器，则发送心跳请求
-                        channelPipeline.addLast(new IdleStateHandler(0, 15, 0, TimeUnit.SECONDS));
+                        // 如果在 10 秒内没有数据发送到服务器，则发送心跳请求
+                        channelPipeline.addLast(new IdleStateHandler(0, 10, 0, TimeUnit.SECONDS));
                         // 自定义序列化编解码器
                         channelPipeline.addLast(new RpcMessageEncoder());
                         channelPipeline.addLast(new RpcMessageDecoder());

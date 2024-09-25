@@ -3,7 +3,7 @@ package grey.fable.rpc.framework.core.annotation;
 import java.lang.annotation.*;
 
 /**
- * RPC 引用注释，自动装配服务实现类.
+ * RPC 引用注解，自动装配服务实现类.
  *
  * @author GreyFable
  * @since 2024/8/29 15:24

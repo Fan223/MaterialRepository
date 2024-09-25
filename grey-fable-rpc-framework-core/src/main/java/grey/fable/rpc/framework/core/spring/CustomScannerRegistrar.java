@@ -13,7 +13,7 @@ import org.springframework.core.type.StandardAnnotationMetadata;
 import org.springframework.stereotype.Component;
 
 /**
- * 扫描和筛选指定的注释.
+ * 扫描和筛选指定的注解.
  *
  * @author GreyFable
  * @since 2024/8/29 15:17
